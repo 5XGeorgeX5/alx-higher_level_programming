@@ -6,7 +6,7 @@ def print_square(size):
     """
     Print a square.
     Args:
-        first_name (int): The square size.
+        size (int): The square size.
     Raises:
         TypeError: If size is not int.
         ValueError: If size is less than 0.
