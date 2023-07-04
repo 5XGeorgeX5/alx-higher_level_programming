@@ -57,7 +57,7 @@ class Rectangle:
         Represents the rectangle with the # character.
         """
         rect = ""
-        if self.width != 0 or self.height != 0:
+        if self.width != 0 and self.height != 0:
             for i in range(self.height):
                 rect += '#' * self.width + '\n'
             rect = rect[:-1]
