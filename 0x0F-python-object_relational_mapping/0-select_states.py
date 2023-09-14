@@ -10,6 +10,6 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
     cursor = database.cursor()
-    cursor.execute("SELECT * FROM states")
+    cursor.execute("SELECT * FROM states ORDER BY id")
     for state in cursor.fetchall():
         print(state)
