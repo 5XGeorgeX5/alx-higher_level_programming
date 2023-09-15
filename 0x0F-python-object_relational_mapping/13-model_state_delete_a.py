@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""deletes all State objects with a name containing the letter a from hbtn_0e_6_usa"""
+"""deletes all States that contain the letter a from hbtn_0e_6_usa"""
 from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
