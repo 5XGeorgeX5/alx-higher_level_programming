@@ -10,7 +10,7 @@ if __name__ == '__main__':
         @localhost/{argv[3]}', pool_pre_ping=True)
     start_Session = sessionmaker(bind=engine)
     session = start_Session()
-    states = session.query(State).all()
+    states = session.query(State)
     for state in states:
         print(f"{state.id}: {state.name}")
     session.close()
