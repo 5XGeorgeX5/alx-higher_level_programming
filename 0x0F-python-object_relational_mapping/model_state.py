@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-# Defines a State model.
-# Instance Base = declarative_base():
+"""
+Defines a State model.
+Instance Base = declarative_base():
+"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
