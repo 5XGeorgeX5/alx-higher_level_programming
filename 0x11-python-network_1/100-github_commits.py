@@ -6,7 +6,7 @@ if __name__ == "__main__":
     from requests import get
 
     response = get("https://api.github.com/repos/"
-                   f"{argv[1]}/{argv[2]}/commits?per_page=10")
+                   f"{argv[2]}/{argv[1]}/commits?per_page=10")
     commits = response.json()
     for commit in commits:
         name = commit.get('commit').get('author').get('name')
