@@ -5,6 +5,7 @@ const api = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
 request(api, (err, _, body) => {
   if (err) {
     console.log(err);
+    return;
   }
   console.log(JSON.parse(body).title);
 });
