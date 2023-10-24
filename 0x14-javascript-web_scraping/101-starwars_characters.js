@@ -8,13 +8,22 @@ request(api, (err, _, body) => {
     return;
   }
   const characters = JSON.parse(body).characters;
-  characters.forEach((char) => {
-    request(char, (err, _, body) => {
+  const length = characters.length;
+
+  function iterate (i) {
+    if (i >= length) {
+      return;
+    }
+
+    request(characters[i], (err, _, body) => {
       if (err) {
         console.log(err);
         return;
       }
       console.log(JSON.parse(body).name);
+      iterate(i + 1);
     });
-  });
+  }
+
+  iterate(0);
 });
